@@ -37,7 +37,7 @@ if "device" in form and "interface" in form:
     r = requests.get(url, headers = headers)
 
     #
-    # if status code is 200, then redirect to device group
+    # if status code is 200, then print interface graph
     #
     if r.status_code == requests.codes.ok:
         #
@@ -55,7 +55,7 @@ if "device" in form and "interface" in form:
         print ('error')
 
 #
-# handle all other errors by just forwarding to the Snipe-IT host
+# handle all other errors by printing out error
 #
 else:
     print ('Content-Type: text/html')
