@@ -64,7 +64,7 @@ if "devicegroup" in form:
         print ('Location: ' + librenms_host +'\n')
 
 #
-# handle all other errors by just forwarding to the Snipe-IT host
+# handle all other errors by just forwarding to the LibreNMS host
 #
 else:
     print ('Location: ' + librenms_host +'\n')
