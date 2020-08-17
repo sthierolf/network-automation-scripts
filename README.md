@@ -29,3 +29,8 @@ Requires CGI module (a2enmod cgid) and apache web server config for CGI on NetBo
 
 Details at: [Netbox Custom Links for Snipe-IT and LibreNMS](https://www.thierolf.org/blog/2020/netbox-custom-links-for-snipe-it-and-librenms/)
 
+## netbox-librenms-graph.py
+
+Python version of
+[MrXermon/netbox-graph.php](https://gist.github.com/MrXermon/0b40d7b62bc67083529d01c8a33aa8be)
+
