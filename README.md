@@ -1,5 +1,5 @@
 # netbox-custom-links
-Examples for "Custom Links" in Netbox to other applications by API calls
+Examples for "Custom Links" in Netbox to other applications by API calls and some other Automation/Python scripts
 
 # Code and details
 
@@ -33,4 +33,12 @@ Details at: [Netbox Custom Links for Snipe-IT and LibreNMS](https://www.thierolf
 
 Python version of
 [MrXermon/netbox-graph.php](https://gist.github.com/MrXermon/0b40d7b62bc67083529d01c8a33aa8be)
+
+## qrcode-snipeit.py
+
+Python script to look up Asset tags in Snipe-IT with a generated QR code.
+
+Details at: [Looking up asset tags in Snipe-IT with QR code](https://www.thierolf.org/blog/2020/looking-up-asset-tags-in-snipe-it-with-qr-code/)
+
+
 
