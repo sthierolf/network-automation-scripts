@@ -1,5 +1,5 @@
-# netbox-custom-links
-Examples for "Custom Links" in Netbox to other applications by API calls and some other Automation/Python scripts
+# network-automation-scripts
+Repo with my Network Automation and/or Python scripts, Examples for "Custom Links" in Netbox to other applications by API calls, and so on.
 
 # Code and details
 
