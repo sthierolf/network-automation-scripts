@@ -3,6 +3,16 @@ Repo with my Network Automation and/or Python scripts, Examples for "Custom Link
 
 # Code and details
 
+## backup2git.py
+This backup script gets it's devices from Netbox, does a backup with CLI/pexpect and checks in into a gitlab repo.
+
+Details at:
+
+[Part One: Backup2Git: Cisco configuration backup with Netbox and Gitlab](https://www.thierolf.org/blog/2021/cisco-configuration-backup-with-netbox-and-gitlab/)
+
+[Part Two: Backup2Git: Low Level Device functions for backup with Netbox and Gitlab](https://www.thierolf.org/blog/2021/low-level-device-functions-for-backup-with-netbox-and-gitlab/)
+
+
 ## netbox-snipeit.php
 Integration of Snipe-IT Asset Management into Netbox DCIM/IPAM as Custom Link with a PHP script and using Snipe-IT API call.
 Runs on Snipe-IT server.
