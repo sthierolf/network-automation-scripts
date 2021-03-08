@@ -12,6 +12,9 @@ Details at:
 
 [Part Two: Backup2Git: Low Level Device functions for backup with Netbox and Gitlab](https://www.thierolf.org/blog/2021/low-level-device-functions-for-backup-with-netbox-and-gitlab/)
 
+[Part Three: Backup2Git: Check in of configuration files to a Gitlab server](https://www.thierolf.org/blog/2021/check-in-of-configuration-files-to-a-gitlab-server/)
+
+
 
 ## netbox-snipeit.php
 Integration of Snipe-IT Asset Management into Netbox DCIM/IPAM as Custom Link with a PHP script and using Snipe-IT API call.
