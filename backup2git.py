@@ -28,6 +28,8 @@ scp_host = "HOST_OR_IP"
 backup_user = "USERNAME"
 backup_pass = "PASSWORD"
 backup_enable = "ENABLE_PASSWORD"
+# Set Gitlab project ID
+project_id = PROJECT_ID
 
 
 ###############################################################################
@@ -220,5 +222,82 @@ def cliCiscoAsaFirewall():
   
   
 ###############################################################################
-# Todo: function to checkin cfg files to gitlab
-###############################################################################
+# Get the devices from Netbox
+devices = getDevicesFromNetbox()
+
+  # Use a for-loop to go through the devices and check in the configuration files
+  for i in range(0, len(devices)):
+
+    # Split list
+    role = str(devices[i][0])
+    location = str(devices[i][1])
+    hostname = str(devices[i][2])
+    ipv4 = str(devices[i][3])[:len(str(devices[i][3]))-3]
+    status = str(devices[i][4])
+
+    # If device is active and has a primary IPv4 address (ssh connect action)
+    if status == "Active" and ipv4 != "N":
+
+      # role is a switch
+        if role == "switch":
+          cliCiscoSwitch()
+        # role is a wlc
+        elif role == "wificontroller":
+          cliCiscoWirelessController()
+        # role is a firewall
+        elif role == "wanfirewall":
+          cliCiscoAsaFirewall()
+
+    # handle list from netbox if device is missing ipv4 or if
+    # device status is set to something else than active
+    else:
+      print ("WARN: device not set to active or IP missing")
+
+    # If device is active and has primary IPv4 address (open file action)
+    if status == "Active" and ipv4 != "N":
+      # open config file and read it into a string variable
+      try:
+        content = open('/tmp/' + hostname + '.cfg').read()
+      except:
+        print ("ERROR: Cannot open file: " + hostname + ".cfg")
+
+      urllib3.disable_warnings()
+      requests.packages.urllib3.disable_warnings()
+      gl = gitlab.Gitlab(gitlab_url, ssl_verify=False, private_token=gitlab_token)
+      # authenticate
+      gl.auth()
+      # get gitlab project
+      project = gl.projects.get(project_id)
+
+      # try with a commit create if file does not exist on gitlab project
+      try:
+        data_create = {
+          'branch': 'master',
+          'commit_message': 'Initial commit of config file on ' + today + ' by backup2git',
+          'actions': [
+            {
+              'action': 'create',
+               'file_path': location + '/' + hostname + '.cfg',
+               'content': open('/tmp/' + hostname + '.cfg').read(),
+            }
+          ]
+        }
+      except:
+        print ("Cannot build commit create JSON")
+        pass
+      # If file exists, use commit update to check in new version of file
+      try:
+        data_update = {
+          'branch': 'master',
+          'commit_message': 'Update of config file on ' + today + ' by backup2git',
+          'actions': [
+            {
+              'action': 'update',
+              'file_path': location + '/' + hostname + '.cfg',
+              'content': open('/tmp/' + hostname + '.cfg').read(),
+            }
+          ]
+        }
+      except:
+        print ("Cannot build commit update JSON")
+        pass
