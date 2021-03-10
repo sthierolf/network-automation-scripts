@@ -1,6 +1,8 @@
 # network-automation-scripts
 Repo with my Network Automation and/or Python scripts, Examples for "Custom Links" in Netbox to other applications by API calls, and so on.
 
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/sthierolf/network-automation-scripts)
+
 # Code and details
 
 ## backup2git.py
