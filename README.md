@@ -18,6 +18,12 @@ Details at:
 
 
 
+## dds-quick-test.py
+Simple DMARC DKIM SPF quick test.
+This script tests a domain for DMARC, DKIM and SPF records. To perform the test, the DKIM selector need to be extracted from an email. For example, to see the DKIM selector you can send an email to your self.
+
+
+
 ## netbox-snipeit.php
 Integration of Snipe-IT Asset Management into Netbox DCIM/IPAM as Custom Link with a PHP script and using Snipe-IT API call.
 Runs on Snipe-IT server.
