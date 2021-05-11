@@ -21,7 +21,7 @@ Details at:
 
 ## dds-quick-test.py
 Simple DMARC DKIM SPF quick test.
-This script tests a domain for DMARC, DKIM and SPF records. To perform the test, the DKIM selector need to be extracted from an email. To see the DKIM selector you can send an email to yourself and look iy up in the headers.
+This script tests a domain for DMARC, DKIM and SPF records. To perform the test, the DKIM selector need to be extracted from an email. To see the DKIM selector you can send an email to yourself and look it up in the headers.
 
 [https://www.thierolf.org/blog/2021/small-python-script-to-quick-test-dmarc-dkim-and-spf-records/](https://www.thierolf.org/blog/2021/small-python-script-to-quick-test-dmarc-dkim-and-spf-records/)
 
