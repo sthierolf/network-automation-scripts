@@ -64,9 +64,12 @@ Python script to look up Asset tags in Snipe-IT with a generated QR code.
 
 Details at: [Looking up asset tags in Snipe-IT with QR code](https://www.thierolf.org/blog/2020/looking-up-asset-tags-in-snipe-it-with-qr-code/)
 
-## SiSyPHuS Win 10 Telemetry blocklist
+## sisyphus-win-10-telemetry.txt
+
 Blocklist for Pi-Hole based on BSI SiSyPHuS Win 10 Telemetry data
+
 Additional information can be found at:
+
 https://www.bsi.bund.de/EN/Topics/Cyber-Security/Recommendations/SiSyPHuS_Win10/AP4/SiSyPHuS_AP4_node.html
 
-sisyphus-win-10-telemetry.txt
+
