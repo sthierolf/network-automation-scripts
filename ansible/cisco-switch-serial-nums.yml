@@ -1,0 +1,31 @@
+
+
+    #
+    # Update Serial Number of Single Switch
+    #
+    - name: "Switch-Single: Update Serial"
+      netbox.netbox.netbox_device:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        validate_certs: no
+        data:
+          name: "{{ name }}"
+          serial: "{{ ansible_net_serialnum }}"
+        state: present
+
+    #
+    # Update all Serial Number of Switch-Stack
+    #
+    - name: "Switch-Stack: Update Serials"
+      netbox.netbox.netbox_device:
+        netbox_url: "{{ netbox_url }}"
+        netbox_token: "{{ netbox_token }}"
+        validate_certs: no
+        data:
+          name: "{{ item.name }}"
+          serial: "{{ ansible_net_stacked_serialnums[idx_stack] }}"
+        state: present
+      loop: "{{ vchassis_stacked_switches }}"
+      loop_control:
+        index_var: idx_stack
+        
