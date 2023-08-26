@@ -1,0 +1,76 @@
+---
+# ASA / Min-Facts
+# ===============
+# Collects minimum facts from ASA in single or clustered mode
+#
+# 2023-08-26  stefan  init
+#
+- name: "Block: Min-Facts Firewall-Single"
+  block:
+
+    - name: "Firewall-Single: Get Min-Facts"
+      cisco.asa.asa_command:
+        commands:
+          - show run | include hostname
+          - show version
+          - show inventory
+      register: asa_vars
+
+    - name: "Firewall-Single: Extract Min-Facts"
+      set_fact:
+        ansible_net_hostname:  "{{ asa_vars.stdout[0].split()[1] }}"
+        ansible_net_version:   "{{ asa_vars.stdout[1].split('\n')[0].split()[6] }}"
+        ansible_net_model:     "{{ asa_vars.stdout[2].split('\n')[1].split()[1] }}"
+        ansible_net_serialnum: "{{ asa_vars.stdout[2].split('\n')[1].split()[7] }}"
+
+    - name: "Firewall-Single: Display Min-Facts"
+      debug:
+        msg: "Device: {{ ansible_net_hostname }} is model: {{ ansible_net_model }} with serial: {{ ansible_net_serialnum }} and version: {{ ansible_net_version }}"
+
+  when: role == "Firewall-Single"
+
+
+- name: "Block: Min-Facts Firewall-Cluster"
+  block:
+
+    - name: "Firewall-Cluster: Get Min-Facts Primary"
+      cisco.asa.asa_command:
+        commands:
+          - show run | include hostname
+          - show version
+          - show inventory
+      register: asa_vars_primary
+
+    - name: "Firewall-Cluster: Get Min-Facts Failover"
+      cisco.asa.asa_command:
+        commands:
+          - failover exec mate show run | include hostname
+          - failover exec mate show version
+          - failover exec mate show inventory
+      register: asa_vars_failover
+      ignore_errors: yes
+
+    - name: "Firewall-Cluster: Extract Min-Facts Hostname/Version"
+      set_fact:
+        ansible_net_hostname: "{{ asa_vars_primary.stdout[0].split()[1] }}"
+        ansible_net_version:  "{{ asa_vars_primary.stdout[1].split('\n')[0].split()[6] }}"
+
+    - name: "Firewall-Cluster: Extract Min-Facts Stacked Models"
+      set_fact:
+        ansible_net_stacked_models:
+          - "{{ asa_vars_primary.stdout[2].split('\n')[1].split()[1] }}"
+          - "{{ asa_vars_failover.stdout[2].split('\n')[1].split()[1] }}"
+      ignore_errors: yes
+
+    - name: "Firewall-Cluster: Extract Min-Facts Stacked Serials"
+      set_fact:
+        ansible_net_stacked_serialnums:
+          - "{{ asa_vars_primary.stdout[2].split('\n')[1].split()[7] }}"
+          - "{{ asa_vars_failover.stdout[2].split('\n')[1].split()[7] }}"
+      ignore_errors: yes
+
+    - name: "Firewall-Cluster: Display Min-Facts"
+      debug:
+        msg: "Device: {{ ansible_net_hostname }} is model: {{ ansible_net_stacked_models }} with serial: {{ ansible_net_stacked_serialnums }} and version: {{ ansible_net_version }}"
+
+  when: role == "Firewall-Cluster"
