@@ -8,7 +8,7 @@ Repo with my Network Automation and/or Python scripts, Examples for "Custom Link
 
 ## Ansible
 
-Coming soon
+Example and code fragments for Cisco, Netbox and Ansible.
 
 
 

@@ -1,4 +1,10 @@
-
+---
+# NetBox / Update Serial Numbers
+# ==============================
+# Update Serial number of single and stacked switch
+#
+# 2023-08-26  stefan  init
+#
 
     #
     # Update Serial Number of Single Switch

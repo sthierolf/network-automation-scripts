@@ -30,6 +30,7 @@
   when: role == "Firewall-Single"
 
 
+
 - name: "Block: Min-Facts Firewall-Cluster"
   block:
 
