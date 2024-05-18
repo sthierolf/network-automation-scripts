@@ -1,0 +1,13 @@
+---
+#
+# task_02_config_sysinfo.yaml
+#
+- name: "Set SNMP-sysContact"
+  ansible.windows.win_powershell:
+    script: |
+      Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\SNMP\Parameters\RFC1156Agent" -Name "sysContact" -Value "SNMP_TEST_CONTACT"
+
+- name: "Set SNMP-sysLocation"
+  ansible.windows.win_powershell:
+    script: |
+      Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\SNMP\Parameters\RFC1156Agent" -Name "sysLocation" -Value "SNMP_TEST_LOCATION"

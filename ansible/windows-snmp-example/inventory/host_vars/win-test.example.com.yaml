@@ -1,0 +1,8 @@
+---
+# 
+# host_vars for Microsoft Windows
+#
+ansible_host: [IPV4_ADDRESS]
+hostname: win-test
+domainname: example.com
+fqdn: "{{ hostname }}.{{ domainname }}"

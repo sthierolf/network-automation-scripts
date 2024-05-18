@@ -1,0 +1,9 @@
+---
+#
+# Inventory
+#
+all:
+  children:
+    microsoft_windows:
+      hosts:
+        win-test.example.com:
