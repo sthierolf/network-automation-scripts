@@ -7,3 +7,5 @@ Example and code fragments for Cisco, Netbox and Ansible.
 * `netbox-cisco-asa-firewall-serialnums.yaml` Update Serial number of single and clustered ASA firewall
 
 * `netbox-cisco-switch-serialnums.yaml` Update Serial number of single and stacked switch
+
+* `windows-snmp-example` Installs and configures SNMP on Windows Server
