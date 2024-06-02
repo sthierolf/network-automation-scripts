@@ -1,0 +1,7 @@
+---
+# Vars
+# ====
+graylog_server_url: "https://__URL__/api"
+graylog_server_api_token: "__TOKEN__"
+graylog_update_interval: 10
+graylog_tls_skip_verify: true
