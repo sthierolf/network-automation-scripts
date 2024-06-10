@@ -14,6 +14,11 @@
           - graylog_update_interval is defined
           - graylog_tls_skip_verify is defined
           - graylog_node_id is defined
+          - graylog_tls_skip_verify is defined
+          - graylog_send_status is defined
+          - graylog_log_rotate_max_file_size is defined
+          - graylog_log_rotate_keep_files is defined
+          - graylog_collector_validation_timeout is defined
 
     - name: "Deploy config: sidecar.yaml.j2"
       ansible.builtin.template:
@@ -26,16 +31,3 @@
         src: node-id.j2
         dest: C:\Program Files\Graylog\sidecar\node-id
         backup: false
-
-    - name: "Set Win-Firewall to allow Graylog"
-      community.windows.win_firewall_rule:
-        name: "Allow-TCP-Graylog [ansible-managed]"
-        localport: 5044
-        action: allow
-        direction: in
-        protocol: tcp
-        profiles: 
-        - domain
-        - private
-        enabled: yes
-        state: present

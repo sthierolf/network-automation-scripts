@@ -1,12 +1,11 @@
 ---
-# host_vars for Microsoft Windows
-# ===============================
-ansible_host: [IPV4_ADDRESS]
-hostname: win-test
+# Ansible-specific
+# ================
+ansible_host: n.n.n.n
+hostname: win-server1
 domainname: example.com
 fqdn: "{{ hostname }}.{{ domainname }}"
 
-# graylog_node_id
+# Graylog-Node-ID
 # ===============
-# Ensures host has always same node-id after install/uninstall
 graylog_node_id: nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn

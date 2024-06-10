@@ -1,8 +1,7 @@
 ---
-#
 # Playbook
-#
-- hosts: win-test.example.com
+# ========
+- hosts: microsoft_windows
   gather_facts: true
   roles:
-    - windows/graylog
+    - server/windows/graylog

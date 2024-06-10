@@ -11,11 +11,8 @@
         that:
           - graylog_server_url is defined
           - graylog_server_api_token is defined
-          - graylog_update_interval is defined
-          - graylog_tls_skip_verify is defined
-          - graylog_node_id is defined
 
-    - name: "Create TEMP directory"
+    - name: "Create: TEMP directory"
       ansible.windows.win_file:
         path: C:\Temp
         state: directory
@@ -25,7 +22,7 @@
         src: graylog_sidecar_installer_1.5.0-1.exe
         dest: C:\temp\graylog_sidecar_installer_1.5.0-1.exe
 
-    - name: "Install graylog-sidecar"
+    - name: "Install: graylog-sidecar"
       ansible.windows.win_package:
         path: C:\temp\graylog_sidecar_installer_1.5.0-1.exe
         creates_path: C:\Program Files\Graylog\sidecar
