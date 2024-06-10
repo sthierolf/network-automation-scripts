@@ -17,18 +17,21 @@ This backup script gets it's devices from Netbox, does a backup with CLI/pexpect
 
 Details at:
 
-[Part One: Backup2Git: Cisco configuration backup with Netbox and Gitlab](https://www.thierolf.org/blog/2021/cisco-configuration-backup-with-netbox-and-gitlab/)
+[Part One: Backup2Git: Cisco configuration backup with Netbox and Gitlab](https://www.thierolf.org/posts/cisco-configuration-backup-with-netbox-and-gitlab/)
 
-[Part Two: Backup2Git: Low Level Device functions for backup with Netbox and Gitlab](https://www.thierolf.org/blog/2021/low-level-device-functions-for-backup-with-netbox-and-gitlab/)
+[Part Two: Backup2Git: Low Level Device functions for backup with Netbox and Gitlab](https://www.thierolf.org/posts/low-level-device-functions-for-backup-with-netbox-and-gitlab/)
 
-[Part Three: Backup2Git: Check in of configuration files to a Gitlab server](https://www.thierolf.org/blog/2021/check-in-of-configuration-files-to-a-gitlab-server/)
+[Part Three: Backup2Git: Check in of configuration files to a Gitlab server](https://www.thierolf.org/posts/check-in-of-configuration-files-to-a-gitlab-server/)
+
 
 
 ### netbox/netbox-snipeit.php
 Integration of Snipe-IT Asset Management into Netbox DCIM/IPAM as Custom Link with a PHP script and using Snipe-IT API call.
 Runs on Snipe-IT server.
   
-Details at: [Custom links in Netbox for Snipe-IT Asset Management](https://www.thierolf.org/blog/2020/custom-links-in-netbox-for-snipe-it-asset-management/)
+Details at: ~~[Custom links in Netbox for Snipe-IT Asset Management](https://www.thierolf.org/blog/2020/custom-links-in-netbox-for-snipe-it-asset-management/)~~
+
+
 
 ### netbox/netbox-snipeit.py
 Integration of Snipe-IT Asset Management into Netbox DCIM/IPAM as Custom Link in Python. 
@@ -37,7 +40,7 @@ Calls API for hardware (Snipe-IT) / device (NetBox) and location (Snipe-IT) / si
 
 Requires CGI module (a2enmod cgid) and apache web server config for CGI on NetBox server.
 
-Details at: [Netbox Custom Links for Snipe-IT and LibreNMS](https://www.thierolf.org/blog/2020/netbox-custom-links-for-snipe-it-and-librenms/)
+Details at: ~~[Netbox Custom Links for Snipe-IT and LibreNMS](https://www.thierolf.org/blog/2020/netbox-custom-links-for-snipe-it-and-librenms/)~~
 
 
 ### netbox/netbox-librenms.py
@@ -69,5 +72,5 @@ Details at: [Looking up asset tags in Snipe-IT with QR code](https://www.thierol
 Simple DMARC DKIM SPF quick test.
 This script tests a domain for DMARC, DKIM and SPF records. To perform the test, the DKIM selector need to be extracted from an email. To see the DKIM selector you can send an email to yourself and look it up in the headers.
 
-[https://www.thierolf.org/blog/2021/small-python-script-to-quick-test-dmarc-dkim-and-spf-records/](https://www.thierolf.org/blog/2021/small-python-script-to-quick-test-dmarc-dkim-and-spf-records/)
+[Small Python script to quick test DMARC DKIM and SPF records](https://www.thierolf.org/posts/small-python-script-to-quick-test-dmarc-dkim-and-spf-records/)
 
