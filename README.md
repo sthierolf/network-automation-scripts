@@ -4,13 +4,9 @@ Repo with my Network Automation and/or Python scripts, Examples for "Custom Link
 [![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/sthierolf/network-automation-scripts)
 
 
-
-
 ## Ansible
 
 Example and code fragments for Cisco, Netbox and Ansible.
-
-
 
 
 ## NetBox
@@ -67,7 +63,7 @@ Details at: [Looking up asset tags in Snipe-IT with QR code](https://www.thierol
 
 
 
-
+## Misc
 
 ### dds-quick-test.py
 Simple DMARC DKIM SPF quick test.
