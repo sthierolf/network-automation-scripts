@@ -62,7 +62,7 @@ Python version of
 
 Python script to look up Asset tags in Snipe-IT with a generated QR code.
 
-Details at: [Looking up asset tags in Snipe-IT with QR code](https://www.thierolf.org/blog/2020/looking-up-asset-tags-in-snipe-it-with-qr-code/)
+Details at: ~~[Looking up asset tags in Snipe-IT with QR code](https://www.thierolf.org/blog/2020/looking-up-asset-tags-in-snipe-it-with-qr-code/)~~
 
 
 
