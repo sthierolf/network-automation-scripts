@@ -1,0 +1,7 @@
+---
+# Playbook
+# ========
+- hosts: microsoft_windows
+  gather_facts: true
+  roles:
+    - server/windows/nsclientplusplus

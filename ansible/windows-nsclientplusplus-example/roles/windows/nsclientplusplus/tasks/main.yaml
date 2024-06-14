@@ -1,0 +1,10 @@
+---
+# Tasks
+# =====
+- name: "Block"
+  ansible.builtin.include_tasks: "{{ tasks }}"
+  loop:
+    - task_01_install_nsclientplusplus.yaml
+    - task_02_configure_nsclientplusplus.yaml
+  loop_control:
+    loop_var: tasks
