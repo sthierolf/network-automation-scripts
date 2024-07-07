@@ -1,0 +1,9 @@
+---
+#
+# Inventory
+#
+all:
+  children:
+    debian_linux:
+      hosts:
+        debian-test.example.com:

@@ -1,0 +1,7 @@
+---
+# Playbook
+# ========
+- hosts: debian_linux
+  gather_facts: true
+  roles:
+    - server/debian/graylog

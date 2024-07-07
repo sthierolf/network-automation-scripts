@@ -1,0 +1,11 @@
+---
+# Vars
+# ====
+graylog_server_url: "https://___URL_OF_GRAYLOG_SERVER___/api"
+graylog_server_api_token: "___GRAYLOG_API_TOKEN___"
+graylog_update_interval: 10
+graylog_tls_skip_verify: true
+graylog_send_status: true
+graylog_log_rotate_max_file_size: "10MiB"
+graylog_log_rotate_keep_files: 10
+graylog_collector_validation_timeout: "1m"

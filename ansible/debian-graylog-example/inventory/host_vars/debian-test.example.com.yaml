@@ -2,7 +2,7 @@
 # Ansible-specific
 # ================
 ansible_host: n.n.n.n
-hostname: win-test
+hostname: debian-test
 domainname: example.com
 fqdn: "{{ hostname }}.{{ domainname }}"
 

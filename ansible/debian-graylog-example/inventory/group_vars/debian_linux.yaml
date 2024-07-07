@@ -1,0 +1,8 @@
+---
+# Group_vars for Debian Linux
+# ===========================
+ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
+ansible_user: "[ANSIBLE_USERNAME]"
+ansible_password: "[ANSIBLE_PASSWORD]"
+ansible_become_password: "[ANSIBLE_PASSWORD]"
+ansible_become: true
