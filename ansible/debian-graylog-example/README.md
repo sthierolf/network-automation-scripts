@@ -2,8 +2,8 @@
 
 ## English
 
-🇺🇸 Blog post coming...
+🇺🇸 [Ansible Role to onboard Debian Linux in Graylog Open](https://www.thierolf.org/posts/ansible-role-to-onboard-debian-linux-in-graylog-open/)
 
 ## Deutsch
 
-🇩🇪 Blog Post folgt...
+🇩🇪 [Ansible Role für das Onboarding von Debian Linux in Graylog Open](https://www.thierolf.org/posts/ansible-role-fuer-das-onboarding-von-debian-linux-in-graylog-open/)
