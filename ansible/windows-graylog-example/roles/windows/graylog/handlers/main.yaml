@@ -1,7 +1,0 @@
----
-# Handlers
-# ========
-- name: "Restart: graylog-sidecar"
-  ansible.windows.win_service:
-    name: graylog-sidecar
-    state: restarted

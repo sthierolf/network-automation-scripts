@@ -1,7 +1,0 @@
----
-# Handlers
-# ========
-- name: "Restart: nscp"
-  ansible.windows.win_service:
-    name: nscp
-    state: restarted

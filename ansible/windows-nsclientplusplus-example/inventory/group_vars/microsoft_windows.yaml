@@ -1,9 +1,0 @@
----
-#
-# group_vars for Microsoft Windows
-ansible_ssh_common_args: "-o StrictHostKeyChecking=no"
-ansible_user: "[ANSIBLE_USERNAME]"
-ansible_password: "[ANSIBLE_PASSWORD]"
-ansible_become_password: "{{ ansible_password }}"
-ansible_connection: ssh
-ansible_shell_type: powershell
